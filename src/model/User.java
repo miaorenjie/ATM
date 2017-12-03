@@ -1,6 +1,18 @@
 package model;
 
 public class User {
+    private static User instance;
+    public static User getInstance(){
+        if (instance == null){
+            instance = new User();
+        }
+        return instance;
+    }
+
+    public static void setNull(){
+        instance = null;
+    }
+
     private String emp_no;
     private String emp_pass;
     private int type;

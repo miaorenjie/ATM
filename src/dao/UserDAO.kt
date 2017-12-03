@@ -103,7 +103,7 @@ class UserDAO : IUser {
         var pstmt:PreparedStatement
         var rs:ResultSet
 
-        pstmt=con.prepareStatement("select * from user where emp_emp_no like ?")
+        pstmt=con.prepareStatement("select * from user where emp_no like ?")
         pstmt.setString(1,"%"+userName+"%")
         rs=pstmt.executeQuery()
         while (rs.next()){
