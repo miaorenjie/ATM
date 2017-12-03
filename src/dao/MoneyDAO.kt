@@ -102,7 +102,7 @@ class MoneyDAO : IMoney {
         var pstmt: PreparedStatement
         var rs: ResultSet
 
-        pstmt=con.prepareStatement("select * from money where emp_emp_no like ?")
+        pstmt=con.prepareStatement("select * from money where emp_no like ?")
         pstmt.setString(1,"%"+moneyName+"%")
         rs=pstmt.executeQuery()
         while (rs.next()){

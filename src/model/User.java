@@ -6,6 +6,11 @@ public class User {
     private int type;
     public User(){}
 
+    public User(String emp_no, String emp_pass) {
+        this.emp_no = emp_no;
+        this.emp_pass = emp_pass;
+    }
+
     public User(String emp_no, String emp_pass, int type) {
         this.emp_no = emp_no;
         this.emp_pass = emp_pass;
